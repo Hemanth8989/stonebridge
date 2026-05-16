@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@sb/types": ["../../packages/types/src/index.ts"],
+      "@sb/api-client": ["../../packages/api-client/src/index.ts"],
+      "@sb/ui": ["../../packages/ui/src/index.ts"],
+      "@sb/utils": ["../../packages/utils/src/index.ts"],
+      "@/*": ["./src/*"]
+    },
+    "noEmit": true,
+    "types": ["vite/client"]
+  },
+  "include": ["src", "vite.config.ts"]
+}

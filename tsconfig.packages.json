@@ -1,0 +1,20 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "noEmit": true,
+        "baseUrl": ".",
+        "paths": {
+            "@sb/types": ["packages/types/src/index.ts"],
+            "@sb/utils": ["packages/utils/src/index.ts"],
+            "@sb/ui": ["packages/ui/src/index.ts"],
+            "@sb/api-client": ["packages/api-client/src/index.ts"]
+        }
+    },
+    "include": [
+        "packages/types/src/**/*.ts",
+        "packages/utils/src/**/*.ts",
+        "packages/ui/src/**/*.ts",
+        "packages/ui/src/**/*.tsx",
+        "packages/api-client/src/**/*.ts"
+    ]
+}

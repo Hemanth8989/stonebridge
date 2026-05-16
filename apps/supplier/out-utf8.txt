@@ -1,0 +1,120 @@
+﻿
+> @sb/supplier@0.0.1 type-check
+> tsc --noEmit
+
+src/components/analytics/InventoryAgingTable.tsx(23,6): error TS2741: Property 'keyExtractor' is missing in type '{ loading: boolean | undefined; data: AgingItem[]; columns: ({ key: string; header: string; render: (row: AgingItem) => Element; } | { key: string; header: string; render: (row: AgingItem) => string; })[]; }' but required in type 'SbDataTableProps<AgingItem>'.
+src/components/analytics/RevenueChart.tsx(18,31): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/components/analytics/TopBuyersTable.tsx(27,11): error TS2322: Type '(_: any, i: any) => Element' is not assignable to type '(item: TopBuyer) => ReactNode'.
+  Target signature provides too few arguments. Expected 2 or more, but got 1.
+src/components/analytics/TopBuyersTable.tsx(27,20): error TS7006: Parameter '_' implicitly has an 'any' type.
+src/components/analytics/TopBuyersTable.tsx(27,23): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/components/analytics/TopBuyersTable.tsx(34,25): error TS2322: Type '{ fallback: string; size: "sm"; }' is not assignable to type 'IntrinsicAttributes & SbAvatarProps'.
+  Property 'fallback' does not exist on type 'IntrinsicAttributes & SbAvatarProps'.
+src/components/common/NotificationBell.tsx(5,30): error TS2305: Module '"@sb/utils"' has no exported member 'cn'.
+src/components/common/UserMenu.tsx(21,19): error TS2322: Type '{ fallback: string; size: "sm"; }' is not assignable to type 'IntrinsicAttributes & SbAvatarProps'.
+  Property 'fallback' does not exist on type 'IntrinsicAttributes & SbAvatarProps'.
+src/components/connections/ConnectionCard.tsx(28,19): error TS2322: Type '{ fallback: string; src: string | undefined; size: "lg"; }' is not assignable to type 'IntrinsicAttributes & SbAvatarProps'.
+  Property 'fallback' does not exist on type 'IntrinsicAttributes & SbAvatarProps'.
+src/components/connections/ConnectionRequestCard.tsx(18,21): error TS2322: Type '{ fallback: string; }' is not assignable to type 'IntrinsicAttributes & SbAvatarProps'.
+  Property 'fallback' does not exist on type 'IntrinsicAttributes & SbAvatarProps'.
+src/components/inventory/SlabCard.tsx(15,44): error TS2339: Property 'basePrice' does not exist on type 'Slab'.
+src/components/inventory/SlabCard.tsx(20,15): error TS2339: Property 'primaryPhotoUrl' does not exist on type 'Slab'.
+src/components/inventory/SlabCard.tsx(21,26): error TS2339: Property 'primaryPhotoUrl' does not exist on type 'Slab'.
+src/components/inventory/SlabForm.tsx(65,29): error TS2339: Property 'notes' does not exist on type 'Partial<Slab>'.
+src/components/inventory/SlabForm.tsx(71,44): error TS2322: Type '(slab: Slab) => void' is not assignable to type '(data: ApiResponse<Slab>, variables: CreateSlabDto, onMutateResult: unknown, context: MutationFunctionContext) => void'.
+  Types of parameters 'slab' and 'data' are incompatible.
+    Type 'ApiResponse<Slab>' is missing the following properties from type 'Slab': id, variantId, supplierId, bundleId, and 30 more.
+src/components/inventory/SlabForm.tsx(73,53): error TS2322: Type '{ materialType: string; materialName: string; thicknessCm: number; finish: string; grossLengthMm: number; grossWidthMm: number; isRemnant: boolean; colorFamily?: string | undefined; pattern?: string | undefined; ... 9 more ...; notes?: string | undefined; }' is not assignable to type 'Partial<CreateSlabDto>'.
+  Types of property 'materialType' are incompatible.
+    Type 'string' is not assignable to type '"granite" | "marble" | "quartzite" | "quartz" | "porcelain" | "dekton" | "limestone" | "travertine" | "onyx" | "slate" | "soapstone" | "other" | undefined'.
+src/components/inventory/SlabStatusMenu.tsx(10,61): error TS2322: Type '"on_hold"' is not assignable to type 'SlabStatus'.
+src/components/inventory/SlabStatusMenu.tsx(10,80): error TS2322: Type '"in_transit"' is not assignable to type 'SlabStatus'.
+src/components/inventory/SlabStatusMenu.tsx(10,94): error TS2322: Type '"delivered"' is not assignable to type 'SlabStatus'.
+src/components/inventory/SlabStatusMenu.tsx(10,107): error TS2322: Type '"consumed"' is not assignable to type 'SlabStatus'.
+src/components/inventory/SlabStatusMenu.tsx(10,119): error TS2322: Type '"scrapped"' is not assignable to type 'SlabStatus'.
+src/components/inventory/SlabStatusMenu.tsx(20,58): error TS2367: This comparison appears to be unintentional because the types '"available" | "reserved" | "allocated" | "shipped" | "hold"' and '"scrapped"' have no overlap.
+src/components/inventory/SlabStatusMenu.tsx(20,90): error TS2367: This comparison appears to be unintentional because the types '"available" | "reserved" | "allocated" | "shipped" | "hold"' and '"consumed"' have no overlap.
+src/components/inventory/SlabTable.tsx(18,6): error TS2741: Property 'keyExtractor' is missing in type '{ loading: boolean | undefined; data: Slab[]; columns: { key: string; header: string; render: (slab: Slab) => "-" | Element; }[]; }' but required in type 'SbDataTableProps<Slab>'.
+src/components/inventory/SlabTable.tsx(27,21): error TS2339: Property 'primaryPhotoUrl' does not exist on type 'Slab'.
+src/components/inventory/SlabTable.tsx(28,32): error TS2339: Property 'primaryPhotoUrl' does not exist on type 'Slab'.
+src/components/inventory/SlabTable.tsx(75,87): error TS2339: Property 'basePrice' does not exist on type 'Slab'.
+src/components/orders/AcknowledgePanel.tsx(24,7): error TS2353: Object literal may only specify known properties, and 'lineResponses' does not exist in type 'AcknowledgePODto'.
+src/components/orders/AcknowledgePanel.tsx(33,7): error TS2353: Object literal may only specify known properties, and 'lineResponses' does not exist in type 'AcknowledgePODto'.
+src/components/orders/AcknowledgePanel.tsx(49,47): error TS2339: Property 'lineItemCount' does not exist on type 'PurchaseOrder'.
+src/components/orders/AcknowledgePanel.tsx(64,73): error TS2339: Property 'name' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'name' does not exist on type 'SlabSnapshot'.
+src/components/orders/AcknowledgePanel.tsx(65,77): error TS2339: Property 'totalPrice' does not exist on type 'POLineItem'.
+src/components/orders/CounterOfferForm.tsx(52,9): error TS2322: Type 'string | undefined' is not assignable to type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+src/components/orders/CounterOfferForm.tsx(53,9): error TS2322: Type '{ lineItemId: string; newUnitPrice: number; }[] | undefined' is not assignable to type '{ lineItemId: string; originalPrice: number; proposedPrice: number; reason: string; }[]'.
+  Type 'undefined' is not assignable to type '{ lineItemId: string; originalPrice: number; proposedPrice: number; reason: string; }[]'.
+src/components/orders/CounterOfferForm.tsx(72,77): error TS2339: Property 'name' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'name' does not exist on type 'SlabSnapshot'.
+src/components/orders/POCard.tsx(26,19): error TS2322: Type '{ fallback: string; size: "sm"; }' is not assignable to type 'IntrinsicAttributes & SbAvatarProps'.
+  Property 'fallback' does not exist on type 'IntrinsicAttributes & SbAvatarProps'.
+src/components/orders/POCard.tsx(29,62): error TS2551: Property 'fabricatorCity' does not exist on type 'POSummary'. Did you mean 'fabricatorId'?
+src/components/orders/POCard.tsx(29,93): error TS2551: Property 'fabricatorState' does not exist on type 'POSummary'. Did you mean 'fabricatorName'?
+src/components/orders/POCard.tsx(36,44): error TS2339: Property 'lineItemCount' does not exist on type 'POSummary'.
+src/components/orders/POCard.tsx(44,44): error TS2551: Property 'requestedDeliveryDate' does not exist on type 'POSummary'. Did you mean 'requestedDelivery'?
+src/components/orders/POCard.tsx(44,82): error TS2551: Property 'requestedDeliveryDate' does not exist on type 'POSummary'. Did you mean 'requestedDelivery'?
+src/components/orders/POLineItemsTable.tsx(35,83): error TS2339: Property 'name' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'name' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(36,94): error TS2339: Property 'skuOrRef' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'skuOrRef' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(45,17): error TS2339: Property 'itemType' does not exist on type 'POLineItem'.
+src/components/orders/POLineItemsTable.tsx(45,58): error TS2339: Property 'slabDetails' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'slabDetails' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(47,39): error TS2339: Property 'slabDetails' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'slabDetails' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(47,85): error TS2339: Property 'slabDetails' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'slabDetails' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(49,53): error TS2339: Property 'slabDetails' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'slabDetails' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(49,98): error TS2339: Property 'slabDetails' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'slabDetails' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(71,90): error TS2339: Property 'totalPrice' does not exist on type 'POLineItem'.
+src/components/orders/POLineItemsTable.tsx(79,13): error TS2367: This comparison appears to be unintentional because the types '"received" | "pending" | "substituted"' and '"countered"' have no overlap.
+src/components/orders/POLineItemsTable.tsx(80,18): error TS2339: Property 'itemType' does not exist on type 'POLineItem'.
+src/components/orders/POLineItemsTable.tsx(80,89): error TS2339: Property 'slabDetails' does not exist on type 'SlabSnapshot | ProductSnapshot'.
+  Property 'slabDetails' does not exist on type 'SlabSnapshot'.
+src/components/orders/POLineItemsTable.tsx(109,11): error TS2741: Property 'keyExtractor' is missing in type '{ columns: any[]; data: POLineItem[]; }' but required in type 'SbDataTableProps<POLineItem>'.
+src/components/orders/POTimeline.tsx(4,10): error TS2305: Module '"@sb/utils"' has no exported member 'cn'.
+src/hooks/useConnections.ts(32,5): error TS2322: Type '(id: string, reason?: string | undefined) => Promise<ApiResponse<Connection>>' is not assignable to type 'MutationFunction<ApiResponse<Connection>, string>'.
+  Types of parameters 'reason' and 'context' are incompatible.
+    Type 'MutationFunctionContext' is not assignable to type 'string'.
+src/hooks/useNotifications.ts(16,24): error TS2345: Argument of type 'PaginatedResponse<Notification>' is not assignable to parameter of type 'Notification[]'.
+  Type 'PaginatedResponse<Notification>' is missing the following properties from type 'Notification[]': length, pop, push, concat, and 29 more.
+src/hooks/useSignalR.ts(21,34): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+src/hooks/useSignalR.ts(35,11): error TS2322: Type '"po_received"' is not assignable to type 'NotifType'.
+src/hooks/useSignalR.ts(49,11): error TS2322: Type '"system"' is not assignable to type 'NotifType'.
+src/layouts/AppLayout.tsx(4,10): error TS2305: Module '"@sb/utils"' has no exported member 'cn'.
+src/layouts/AuthLayout.tsx(13,95): error TS2322: Type '"supplier_admin"' is not assignable to type 'UserRole'.
+src/main.tsx(9,27): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+src/main.tsx(29,20): error TS2339: Property 'env' does not exist on type 'ImportMeta'.
+src/pages/ConnectionsPage.tsx(52,18): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/pages/DashboardPage.tsx(31,46): error TS2345: Argument of type 'string' is not assignable to parameter of type '(item: Slab) => string'.
+src/pages/DashboardPage.tsx(53,16): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/pages/DashboardPage.tsx(54,11): error TS2322: Type 'number' is not assignable to type '{ value: number; label: string; direction: "up" | "down" | "neutral"; }'.
+src/pages/DashboardPage.tsx(59,16): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/pages/DashboardPage.tsx(65,16): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/pages/DashboardPage.tsx(70,16): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/pages/DashboardPage.tsx(83,18): error TS2741: Property 'keyExtractor' is missing in type '{ columns: { key: string; header: string; render: (po: POSummary) => any; }[]; data: POSummary[]; }' but required in type 'SbDataTableProps<POSummary>'.
+src/pages/DashboardPage.tsx(102,42): error TS2339: Property 'lineItemCount' does not exist on type 'POSummary'.
+src/pages/DashboardPage.tsx(132,36): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/pages/InventoryPage.tsx(76,20): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+src/pages/PODetailPage.tsx(32,30): error TS2304: Cannot find name 'PurchaseOrder'.
+src/pages/PODetailPage.tsx(167,25): error TS2322: Type '{ fallback: any; }' is not assignable to type 'IntrinsicAttributes & SbAvatarProps'.
+  Property 'fallback' does not exist on type 'IntrinsicAttributes & SbAvatarProps'.
+src/pages/POInboxPage.tsx(65,18): error TS2322: Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is not assignable to type 'ReactNode'.
+  Type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>' is missing the following properties from type 'ReactPortal': children, type, props, key
+vite.config.ts(25,3): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'test' does not exist in type 'UserConfigExport'.
